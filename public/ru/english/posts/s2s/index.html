@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="ru"
+  data-theme="dark"
+  class="html"
+><head>
+  <title>
+    
+      
+        |
+        Snowplow to Segment
+
+
+      
+
+
+    
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.100.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="" />
+  <meta
+    name="description"
+    content="
+      How we&#39;ve decided and executed migration from snowplow to segment
+
+
+    "
+  />
+  
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.b2e0cb07595e3519ab1193bb421914e06c0e26b0cc561fef23b3c6131d4d2ffa.css"
+      integrity="sha256-suDLB1leNRmrEZO7QhkU4GwOJrDMVh/vI7PGEx1NL/o="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.31b0a1f317f55c529a460897848c97436bb138b19c399b37de70d463a8bf6ed5.css"
+    integrity="sha256-MbCh8xf1XFKaRgiXhIyXQ2uxOLGcOZs33nDUY6i/btU="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.b1c4e6a10bdbab01f33fff9d78816ee68cf9a9a731f07668afd546a79924cb80.css"
+    integrity="sha256-scTmoQvbqwHzP/&#43;deIFu5oz5qacx8HZor9VGp5kky4A="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.423dee17c62f55fa733a4ee13e00d523dfce88cc4f4ab4549a24ba36bd9de681.css"
+    integrity="sha256-Qj3uF8YvVfpzOk7hPgDVI9/OiMxPSrRUmiS6Nr2d5oE="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.b7d54133b27e5b4de15245b8e143de3e8ed2d674c706137274cedc9953f31917.css"
+    integrity="sha256-t9VBM7J&#43;W03hUkW44UPePo7S1nTHBhNydM7cmVPzGRc="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+
+  <link rel="canonical" href="http://sonac.lol/ru/english/posts/s2s/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.7a513c87595b64079c749049bbefff5a20a8d88467b9d5e813e33bfcd29880de.js"
+    integrity="sha256-elE8h1lbZAecdJBJu&#43;//WiCo2IRnudXoE&#43;M7/NKYgN4="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.1d1e60dd5031959e835e253306615c60139c78c47abbc27e3ef3e28bf82098b4.js"
+      integrity="sha256-HR5g3VAxlZ6DXiUzBmFcYBOceMR6u8J&#43;PvPii/ggmLQ="
+      crossorigin="anonymous"
+    ></script>
+
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Snowplow to Segment"/>
+<meta name="twitter:description" content="How we&#39;ve decided and executed migration from snowplow to segment"/>
+
+
+
+  
+  <meta property="og:title" content="Snowplow to Segment" />
+<meta property="og:description" content="How we&#39;ve decided and executed migration from snowplow to segment" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://sonac.lol/ru/english/posts/s2s/" /><meta property="article:section" content="english" />
+<meta property="article:published_time" content="2021-09-10T10:24:28+02:00" />
+<meta property="article:modified_time" content="2021-09-10T10:24:28+02:00" /><meta property="og:site_name" content="My Amazing Blogo" />
+
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "english",
+        "name": "Snowplow to Segment",
+        "headline": "Snowplow to Segment",
+        "alternativeHeadline": "",
+        "description": "
+      How we\u0027ve decided and executed migration from snowplow to segment
+
+
+    ",
+        "inLanguage": "en-us",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/sonac.lol\/ru\/english\/posts\/s2s\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": ""
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": ""
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": ""
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": ""
+        },
+        "copyrightYear" : "2021",
+        "dateCreated": "2021-09-10T10:24:28.00Z",
+        "datePublished": "2021-09-10T10:24:28.00Z",
+        "dateModified": "2021-09-10T10:24:28.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name":  null ,
+            "url": "http://sonac.lol/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "http:\/\/sonac.lol\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+      ]
+
+    ,
+        "url" : "http:\/\/sonac.lol\/ru\/english\/posts\/s2s\/",
+        "wordCount" : "1596",
+        "genre" : [ ],
+        "keywords" : [ 
+      
+      "thumbnail"
+
+    ]
+    }
+  </script>
+
+
+
+</head>
+<body
+    
+      class="body theme--dark"
+
+    
+  >
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/images/avatar.jpg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/ru">My Amazing Blogo</a>
+        </div>
+
+      
+      <div class="sidebar__introduction-description">
+        <p>random stuff here -></p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://www.linkedin.com/in/andrii-sumko-2257525b/"
+            target="_blank"
+            rel="noopener"
+            aria-label="linkedin"
+            title="linkedin"
+          >
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li class="sidebar__list-item">
+          <a
+            href="mailto:s-1nac@proton.me"
+            target="_blank"
+            rel="noopener"
+            aria-label="e-mail"
+            title="e-mail"
+          >
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        
+        2022
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.972a2c29b7a36a3c40cc4798c8fab0dbae92c1089ab0691e84acbf0c7720ccb3.js"
+    integrity="sha256-lyosKbejajxAzEeYyPqw266SwQiasGkehKy/DHcgzLM="
+    crossorigin="anonymous"
+  ></script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/ru/"
+              
+              title=""
+              >Главная</a
+            >
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/ru/posts/"
+              
+              title=""
+              >Заметки</a
+            >
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/ru/about/"
+              
+              title=""
+              >Обо мне</a
+            >
+          </li>
+
+        
+
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+
+    "
+  >
+    
+      <div class="post__thumbnail-wrapper">
+        <img class="post__thumbnail" src="/images/snowplow-to-segment.png" alt="Thumbnail image" />
+      </div>
+
+    
+    <div class="post__content">
+      <h1>Snowplow to Segment</h1>
+      <h2 id="introduction">Introduction</h2>
+<p>It&rsquo;s common for companies to use tracking systems to enable analytics. While sometimes positive, this practice is often detrimental — Google, we&rsquo;re looking at you. If you want to know your customer and their needs without bothering each one of them, you can turn to analytics tools that, thankfully, don’t have to be built in-house. Many SaaS products rise to the challenge of indicating customer preferences. It&rsquo;s good to have a myriad of options, as competition demands the best.</p>
+<h2 id="basics-snowplow-and-segment">Basics Snowplow and Segment</h2>
+<p>When selecting a SaaS tool for customer analytics tracking, two sit top of mind — Snowplow and Segment. Snowplow is oriented on the engineering side of the market and has features that enable contract testing through the user’s SDK. Snowplow provides quick and robust transfers of event data from source to destination and offers reliable delivery guarantees.</p>
+<p>Another contender, Segment, is geared towards less tech-savvy, more managerial-focused individuals. On the surface, Segment boasts a fancy interface and real-time event analytics. Upon closer inspection, however, you’ll see how powerful the system is. It contains some cool features for developers, including a really expressive API for interacting with their schemas and data validation in real-time.</p>
+<h2 id="why-we-choose-segment">Why we choose Segment</h2>
+<p>For years, my Contentful team and I used Snowplow. Only recently did we begin evaluating and considering a jump to Segment. In the beginning, those around us weren&rsquo;t sure about why we chose one over the other, but our team knew. Certain features really impressed us. So much so that we made the costly but entirely correct decision to migrate to Segment. Among its killer features, I’d like to call out the following:</p>
+<ul>
+<li>Real-time data validation against the schemas (with flexible configuration on how to react to any of the violations)</li>
+<li>User-friendly interface that allows our marketing team to run quick experiments without involving engineers</li>
+<li>Native connection to dozens of the services — we were even able to find Google Analytics</li>
+</ul>
+<h2 id="what-weve-built-to-migrate-smoothly">What we&rsquo;ve built to migrate smoothly</h2>
+<h3 id="cli-to-programmatically-work-with-segment-apis">CLI to programmatically work with Segment APIs</h3>
+<p>When we were working with Snowplow, the way we managed event schemas was through a git repository. That&rsquo;s the way we used to do it, and since people responsible for event data and its consistency are developers and analysts, who are comfortable and like working with git. And since we wanted to continue doing that — we thought about the way of doing it.</p>
+<p>Segment exposes a nice API to work with tracking protocols. We decided to build a small tool that allows us to manage schemas. The tool is a CLI that has four commands:</p>
+<ul>
+<li><code>pull-schemas</code>: pulls schemas from Segment into a folder, parsed as separate JSON files</li>
+<li><code>push-schemas</code>: transforms JSON files into tracking plans and pushes them into Segment</li>
+<li><code>test-schemas</code>: tests JSON files for validity (runs in the CI, so we do not push to Segment invalid schemas)</li>
+<li><code>from-snowplow</code>: transforms Snowplow schema into Segment one.</li>
+</ul>
+<p>We worked out a pretty good way of finding collaborators by making it in Typescript, which also enabled us to define types for schemas and events in particular, e.g.:</p>
+<pre tabindex="0"><code>export interface TrackingPlan {
+  created_time: string // date
+  display_name: string
+  id: string
+  name: string
+  rules: TrackingPlanRules
+  updated_time: string // date
+}
+
+export interface TrackingPlanRules {
+  events: Array&lt;Event&gt;
+  global: null | Record&lt;string, unknown&gt;
+  group: null | Record&lt;string, unknown&gt;
+  group_traits: Array&lt;string&gt;
+  identify: null | Record&lt;string, unknown&gt;
+  identify_traits: Array&lt;string&gt;
+}
+
+export interface Event {
+  description: string
+  name: string
+  rules: EventRules
+  version: number
+}
+
+export interface EventPropertyObject extends Record&lt;string, unknown&gt; {
+  [PropertyKey: string]: EventProperty
+}
+</code></pre><p>This one is convenient, and we plan to open source it when it’s groomed. The main purpose of this CLI is to be used by our CI pipelines to maintain our event tracking schema registry. When people want to add/remove/update some tracking plan, they go to our registry repo, do necessary changes there — and the CLI tests whether the changes are valid JSON schemas and deploys to our workspace in the Segment app.</p>
+<h3 id="segment-test-server">Segment Test Server</h3>
+<p>Small services, something that our teams spin up in the docker, runs in the end-to-end tests. It pulls schemas from the Segment, exposes the REST endpoint and validates payloads against the pulled schemas. Tiny and lightweight, this thing is handy during migration and increases the stability of our services. The idea is pretty simple and sums up in JSON validations using the ajv JS library, which is also used underneath by Typewriter. That enables us to emulate real work of Segment and make us sure that data will be accepted or rejected by it. The example of validation is following:</p>
+<pre tabindex="0"><code>export const validate = (msg: object, schema: object): string =&gt; {
+  const ajv = new Ajv();
+  const validate = ajv.compile(schema);
+
+  const valid = validate(msg);
+  if (!valid) {
+    console.log(`validate.errors: `, validate.errors);
+    return JSON.stringify(validate.errors);
+  }
+  return &#39;valid!&#39;;
+}
+</code></pre><h3 id="segment-alerts">Segment Alerts</h3>
+<p>Segment offers a validation of events, which is important. Receiving notifications when any violations occur is of equal importance. Segment has email notifications built-in and, while useful for some users, they may be ignored by those who let emails pile up or simply ignore them. With the practices of these users in mind, we made an alerting service that aggregates alerts over a small window of time and sends them to slack, tagging the responsible for the event in question.</p>
+<p>Aggregated alerts are more informative — and hopefully less ignored — than those baked into Segment. With these alerts, people see what’s wrong and their responsibility in the matter in a format that’s more accessible.</p>
+<h2 id="what-were-the-challenges">What were the challenges</h2>
+<p><img src="https://memegenerator.net/img/instances/75574353/challenges-challenges-everywhere.jpg" alt="Challenges are everywhere"></p>
+<h3 id="dashboards">Dashboards</h3>
+<p>During our Snowplow years, we built dashboards and analytics on the data coming from there. We had more than 500 queries that used Snowplow data, and we had to migrate those somehow. And even though we were able to partially automatize that process using the API of our analytics tool, there were challenges since we&rsquo;ve decided to take an opportunity and make our tracking better during the migration. Many events changed the schema and, besides, we decided to get rid of generic events by carefully splitting them into proper schemas. That made the data model way better, but it required a lot of manual work to migrate all the dashboards.</p>
+<p>That people were relying on those dashboards, making it even more complicated. In many cases, issues that were brought by migration were treated as urgent bugs and because they blocked everything else.</p>
+<h3 id="product-app-tracking">Product App Tracking</h3>
+<p>Since tracking was happening in many places, migration to the new library was complicated. Many teams work on the same project and, sometimes, they have different approaches to solving challenges. We had to come up with some sort of mid-ground solution. Since migrating from one SDK to another is a challenging and long-lasting process, we need to make it smooth. To make it smoother, we&rsquo;ve merged both SDKs into a package and, for each call to that package, we were sending tracking events to Snowplow and Segment simultaneously. That made migration easier for our product team but harder for the data team since we were ought to maintain (and maintain for a long time) both pipelines. Those pipelines sometimes produced different results and, in many cases, it was kinda expected. Neither service guarantees delivery order of the events. In the end, it was fine.</p>
+<h3 id="learnings">Learnings</h3>
+<p><strong>Avoid writing dirty code.</strong> Ok, sometimes you can. Sometimes it&rsquo;s unavoidable, or the counter costs are too high. Sometimes you&rsquo;re in the rush of delivering a POC. But if it&rsquo;s something you will live with for years, invest time into making it clean and structured. Data is more about structure than any other software engineering branch. If you start piling various things into some generic table, you will end up with having people build some logic on top of it and, when you&rsquo;ll want to refactor it, the cost will be sky-high.</p>
+<p><strong>Avoid extra mental load for users.</strong> Data is widely used across the whole company. HR, SEs from other departments, and especially people in marketing use it daily. If the tool has a steep learning curve, it will make the life of the data department more miserable. You will need to invest in educating your users, helping them out, or even doing things that you usually shouldn&rsquo;t do if you had the right tool. So think about your end users when choosing the tool to use.</p>
+<p><strong>Do not ignore warnings.</strong>
+<img src="https://i.redd.it/vinhvmejba331.jpg" alt="Warnings"></p>
+<p>Engineers tend to ignore warnings because in many cases those are either hard to fix or do not influence anything actually and our brain just starts filtering out those yellow lines in the console. But with data, it&rsquo;s a bit different. With data, those warnings will live with you till the end of time (or till the end of life of your persistence layer) unless you&rsquo;ll fix them. And sooner or later you will need to fix them and that&rsquo;s what we were ought to do with our tracking data since we were not strict on passing the data and allowed systems to send us malformed/incomplete data and in some cases, it lasted for months, until we&rsquo;ve started treating <em>just warnings</em> as real errors.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In the end, we&rsquo;re happy with the decisions made. While we could&rsquo;ve made them sooner, which would have made migration easier, the most important thing is that we now have a reliable system that offers insights into customer behaviors. We have a schema registry managed in git, good and spot-on alerts on the violation, and a reliable mechanism to test all changes.</p>
+<p>Besides that, Segment provides a nice tool, called Typewriter, that does type checking and autocompletion, that our product engineers happily use.</p>
+</div>
+    <div class="post__footer">
+      
+
+      
+        <span><a class="tag" href="/ru/tags/thumbnail/">thumbnail</a></span>
+
+
+
+
+      
+    </div>
+
+    
+  </div>
+
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        
+        2022
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.972a2c29b7a36a3c40cc4798c8fab0dbae92c1089ab0691e84acbf0c7720ccb3.js"
+    integrity="sha256-lyosKbejajxAzEeYyPqw266SwQiasGkehKy/DHcgzLM="
+    crossorigin="anonymous"
+  ></script></body>
+</html>

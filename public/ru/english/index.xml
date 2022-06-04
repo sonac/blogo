@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Englishes on My Blogo</title>
+    <link>http://sonac.lol/ru/english/</link>
+    <description>Recent content in Englishes on My Blogo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 04 Jun 2022 10:24:28 +0200</lastBuildDate><atom:link href="http://sonac.lol/ru/english/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Home, sweet home</title>
+      <link>http://sonac.lol/ru/english/posts/hw/</link>
+      <pubDate>Sat, 04 Jun 2022 10:24:28 +0200</pubDate>
+      
+      <guid>http://sonac.lol/ru/english/posts/hw/</guid>
+      
+        <description>Hi, so I&amp;rsquo;ve decided that I don&amp;rsquo;t like medium (to be honest for many reasons and their ridiculous paywall is just one of many) and that I&amp;rsquo;m gonna move my pathetic couple posts from it to a dedicated place.</description>
+      
+    </item>
+    
+    <item>
+      <title>Snowplow to Segment</title>
+      <link>http://sonac.lol/ru/english/posts/s2s/</link>
+      <pubDate>Fri, 10 Sep 2021 10:24:28 +0200</pubDate>
+      
+      <guid>http://sonac.lol/ru/english/posts/s2s/</guid>
+      
+        <description>How we&#39;ve decided and executed migration from snowplow to segment</description>
+      
+    </item>
+    
+    <item>
+      <title>SSO in Kubernetes</title>
+      <link>http://sonac.lol/ru/english/posts/sso/</link>
+      <pubDate>Mon, 03 Aug 2020 10:24:28 +0200</pubDate>
+      
+      <guid>http://sonac.lol/ru/english/posts/sso/</guid>
+      
+        <description>A simple, yet elegant way to add SSO to any service in Kubernetes</description>
+      
+    </item>
+    
+  </channel>
+</rss>
