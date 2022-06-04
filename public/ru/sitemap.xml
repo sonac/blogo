@@ -2,85 +2,85 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://sonac.lol/ru/english/</loc>
+    <loc>https://blogo-sonac.vercel.app/ru/english/</loc>
     <lastmod>2022-06-04T10:24:28+02:00</lastmod>
   </url><url>
-    <loc>http://sonac.lol/ru/english/posts/hw/</loc>
+    <loc>https://blogo-sonac.vercel.app/ru/english/posts/hw/</loc>
     <lastmod>2022-06-04T10:24:28+02:00</lastmod>
   </url><url>
-    <loc>http://sonac.lol/ru/</loc>
+    <loc>https://blogo-sonac.vercel.app/ru/</loc>
     <lastmod>2022-06-04T10:24:28+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://sonac.lol/"
+                href="https://blogo-sonac.vercel.app/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://sonac.lol/ru/"
+                href="https://blogo-sonac.vercel.app/ru/"
                 />
   </url><url>
-    <loc>http://sonac.lol/ru/russian/</loc>
+    <loc>https://blogo-sonac.vercel.app/ru/russian/</loc>
     <lastmod>2022-06-04T10:24:28+02:00</lastmod>
   </url><url>
-    <loc>http://sonac.lol/ru/russian/posts/hw/</loc>
+    <loc>https://blogo-sonac.vercel.app/ru/russian/posts/hw/</loc>
     <lastmod>2022-06-04T10:24:28+02:00</lastmod>
   </url><url>
-    <loc>http://sonac.lol/ru/english/posts/s2s/</loc>
+    <loc>https://blogo-sonac.vercel.app/ru/english/posts/s2s/</loc>
     <lastmod>2021-09-10T10:24:28+02:00</lastmod>
   </url><url>
-    <loc>http://sonac.lol/ru/tags/</loc>
+    <loc>https://blogo-sonac.vercel.app/ru/tags/</loc>
     <lastmod>2021-09-10T10:24:28+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://sonac.lol/tags/"
+                href="https://blogo-sonac.vercel.app/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://sonac.lol/ru/tags/"
+                href="https://blogo-sonac.vercel.app/ru/tags/"
                 />
   </url><url>
-    <loc>http://sonac.lol/ru/tags/thumbnail/</loc>
+    <loc>https://blogo-sonac.vercel.app/ru/tags/thumbnail/</loc>
     <lastmod>2021-09-10T10:24:28+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://sonac.lol/tags/thumbnail/"
+                href="https://blogo-sonac.vercel.app/tags/thumbnail/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://sonac.lol/ru/tags/thumbnail/"
+                href="https://blogo-sonac.vercel.app/ru/tags/thumbnail/"
                 />
   </url><url>
-    <loc>http://sonac.lol/ru/english/posts/sso/</loc>
+    <loc>https://blogo-sonac.vercel.app/ru/english/posts/sso/</loc>
     <lastmod>2020-08-03T10:24:28+02:00</lastmod>
   </url><url>
-    <loc>http://sonac.lol/ru/categories/</loc>
+    <loc>https://blogo-sonac.vercel.app/ru/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://sonac.lol/categories/"
+                href="https://blogo-sonac.vercel.app/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://sonac.lol/ru/categories/"
+                href="https://blogo-sonac.vercel.app/ru/categories/"
                 />
   </url><url>
-    <loc>http://sonac.lol/ru/series/</loc>
+    <loc>https://blogo-sonac.vercel.app/ru/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://sonac.lol/series/"
+                href="https://blogo-sonac.vercel.app/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://sonac.lol/ru/series/"
+                href="https://blogo-sonac.vercel.app/ru/series/"
                 />
   </url>
 </urlset>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on My Blogo</title>
-    <link>http://sonac.lol/ru/tags/</link>
+    <link>https://blogo-sonac.vercel.app/ru/tags/</link>
     <description>Recent content in Tags on My Blogo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 Sep 2021 10:24:28 +0200</lastBuildDate><atom:link href="http://sonac.lol/ru/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Sep 2021 10:24:28 +0200</lastBuildDate><atom:link href="https://blogo-sonac.vercel.app/ru/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>thumbnail</title>
-      <link>http://sonac.lol/ru/tags/thumbnail/</link>
+      <link>https://blogo-sonac.vercel.app/ru/tags/thumbnail/</link>
       <pubDate>Fri, 10 Sep 2021 10:24:28 +0200</pubDate>
       
-      <guid>http://sonac.lol/ru/tags/thumbnail/</guid>
+      <guid>https://blogo-sonac.vercel.app/ru/tags/thumbnail/</guid>
       
         <description></description>
       

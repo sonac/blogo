@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>thumbnail on My Blogo</title>
-    <link>http://sonac.lol/tags/thumbnail/</link>
+    <link>https://blogo-sonac.vercel.app/tags/thumbnail/</link>
     <description>Recent content in thumbnail on My Blogo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 Sep 2021 10:24:28 +0200</lastBuildDate><atom:link href="http://sonac.lol/tags/thumbnail/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Sep 2021 10:24:28 +0200</lastBuildDate><atom:link href="https://blogo-sonac.vercel.app/tags/thumbnail/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Snowplow to Segment</title>
-      <link>http://sonac.lol/posts/s2s/</link>
+      <link>https://blogo-sonac.vercel.app/posts/s2s/</link>
       <pubDate>Fri, 10 Sep 2021 10:24:28 +0200</pubDate>
       
-      <guid>http://sonac.lol/posts/s2s/</guid>
+      <guid>https://blogo-sonac.vercel.app/posts/s2s/</guid>
       
         <description>How we&#39;ve decided and executed migration from snowplow to segment</description>
       
@@ -20,10 +20,10 @@
     
     <item>
       <title>SSO in Kubernetes</title>
-      <link>http://sonac.lol/posts/sso/</link>
+      <link>https://blogo-sonac.vercel.app/posts/sso/</link>
       <pubDate>Mon, 03 Aug 2020 10:24:28 +0200</pubDate>
       
-      <guid>http://sonac.lol/posts/sso/</guid>
+      <guid>https://blogo-sonac.vercel.app/posts/sso/</guid>
       
         <description>A simple, yet elegant way to add SSO to any service in Kubernetes</description>
       
