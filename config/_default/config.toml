@@ -1,4 +1,4 @@
-baseURL = 'https://blogo-sonac.vercel.app'
+baseURL = 'https://sonac.lol/'
 languageCode = 'en-us'
 title = 'My Blogo'
 theme = "anatole"
