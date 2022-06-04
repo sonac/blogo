@@ -1,0 +1,17 @@
+[[main]]
+name = "Главная"
+identifier = "home"
+url = "/ru/"
+weight = 100
+
+[[main]]
+name = "Заметки"
+identifier = "posts"
+url = "/ru/posts/"
+weight = 200
+
+[[main]]
+name = "Обо мне"
+identifier = "about"
+url = "/ru/about/"
+weight = 300

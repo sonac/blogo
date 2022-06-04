@@ -1,0 +1,10 @@
+[en]
+title = "My Blogo"
+contentDir = "content/english"
+languageName = "EN"
+weight = 1
+#[ru]
+#title = "Мой блогo"
+#contentDir = "content/russian"
+#languageName = "RU"
+#weight = 2

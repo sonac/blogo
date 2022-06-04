@@ -1,0 +1,17 @@
+title = 'My Amazing Blogo'
+autho = "sonac"
+description = "random stuff here ->"
+profilePicture = "images/avatar.jpg"
+
+displayMode = "dark"
+
+
+[[socialIcons]]
+icon = "fab fa-linkedin"
+title = "linkedin"
+url = "https://www.linkedin.com/in/andrii-sumko-2257525b/"
+
+[[socialIcons]]
+icon = "fas fa-envelope"
+title = "e-mail"
+url = "mailto:s-1nac@proton.me"
