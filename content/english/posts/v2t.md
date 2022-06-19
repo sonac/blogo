@@ -7,7 +7,7 @@ thumbnail = "images/v2t.png"
 # Intro
 Well, we all have that friend, who is too lazy to type messages and just spams you with voices, and if you don't - that most likely you're that friend.
 It's ok, we're all not without a flaw and to be honest this one is not the worst to have. Most people are put up with that and patiently listen to your horrible quality audios, on the streets, through Bluetooth headphones, with traffic in the background. But what if that person is in a place, where they can't just listen to your audio message (e.g. church)? Well...
-![modern.png](/static/images/modern.png)
+![modern.png](images/modern.png)
 # Bots to the rescue!
 We're gonna build the telegram bot, which would be able to patiently listen to the message that was sent to you and then just return you beautiful, pure text, the one that we all love so much. Ok, so if it's a speech recognition task, this means neural networks (there are of course available APIs, but we don't want to send our private messages to someone like Google). If it's neural networks - then we think Python. 
 Actually, we won't train our own network, so we would be able to in fact be done with most other programming languages, but Python just feels more natural tool of choice for this task.
@@ -72,7 +72,7 @@ We'll create a class `Bot`, which will be the core of our program (that's unsurp
 
 Now let's try this thing out and see if it even works.
 First, we'll send a simple voice recording to our bot:
-![tg1.png](/static/images/tg1.png)
+![tg1.png](images/tg1.png)
 And then check our folder:
 ```
 (v2t-FJMpmN5L-py3.8) ➜  v2t ll
@@ -174,7 +174,7 @@ class Bot:
 
 And let's run a new test.
 
-![tg2.png](/static/images/tg2.png)
+![tg2.png](images/tg2.png)
 Alrighty, seems working, even with me being non-native, it recognizes speech pretty well.
 So that'd be it. There are some ways to improve it furthermore. First of all, if you want to make this publically usable - it would be good to make transcription also async, not only message handlers and of course, we'd need to generate new names for each audio message, since they might overlap from different chats. If you're bilingual (or even more, like I have chats with friends speaking Ukrainian, Russian and English) it would be also super beneficial to include language detection, there are some tools for that either (you can check out this one: https://huggingface.co/TalTechNLP/voxlingua107-epaca-tdnn)
 
