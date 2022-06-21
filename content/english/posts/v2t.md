@@ -181,3 +181,5 @@ So that'd be it. There are some ways to improve it furthermore. First of all, if
 # Conclusion
 So that'd be it. Overall we ended up having a nice and tidy piece of code, which actually is super useful for many of you out there. This is literally opposite from the majority of enterprise stuff, that many software engineers are writing on their 9-to-5, but let's not be their judges. 
 If you find any of this confusing, or just want to jump straight to the code, the final version is on my Github, here: https://github.com/sonac/v2t
+
+P.S. It just so happened that in the fresh Telegram Premium this feature is inbuilt, but... Now you know how to enable the only important feature of the Premium for free :) 
